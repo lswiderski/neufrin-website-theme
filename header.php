@@ -48,7 +48,30 @@
                 <a class="navbar-brand" href="index.html">Start Bootstrap</a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+           
+            
+            <?php
+
+class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
+  function start_lvl(&$output, $depth) {
+    $indent = str_repeat("\t", $depth);
+    $output .= "\n$indent<ul class=\"sub-menu dropdown-menu\">\n";
+  }
+}
+
+$defaults = array(
+   
+    'container'       => 'div',
+    'container_class' => 'collapse navbar-collapse',
+    'container_id'    => 'bs-example-navbar-collapse-1',
+    'menu_class'      => 'menu nav navbar-nav navbar-right',
+);
+
+wp_nav_menu( $defaults );
+
+?>
+ <!-- Collect the nav links, forms, and other content for toggling -->
+<!--
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -64,7 +87,7 @@
                         <a href="contact.html">Contact</a>
                     </li>
                 </ul>
-            </div>
+            </div>-->
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
