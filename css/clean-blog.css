@@ -64,6 +64,18 @@ hr.small {
   letter-spacing: 1px;
 }
 @media only screen and (min-width: 768px) {
+    .navbar-custom.is-fixed .nav   .dropdown-menu>li>a {
+  color: #404040
+  }
+
+  .navbar-custom .dropdown-menu {
+    background-color: rgba(249, 244, 244, 0.15);
+    
+  }
+  .navbar-custom.is-fixed  .dropdown-menu {
+    background-color: white;
+  }
+
   .navbar-custom {
     background: transparent;
     border-bottom: 1px solid transparent;
@@ -76,15 +88,41 @@ hr.small {
   .navbar-custom .navbar-brand:focus {
     color: rgba(255, 255, 255, 0.8);
   }
-  .navbar-custom .nav li a {
+   .navbar-custom .nav li a {
     color: white;
     padding: 20px;
+  }
+    .navbar-custom .nav li .background--complex a {
+    color: #333;
+    padding: 20px;
+  }
+    .navbar-custom .nav li .background--dark a {
+    color: white;
+    padding: 20px;
+  }
+    .navbar-custom .nav .background--light a{
+    color: #333!important;
+    padding: 20px;
+  }
+  
+   .navbar-custom .nav .background--light ul{
+    background-color: white;
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
     color: rgba(255, 255, 255, 0.8);
   }
-}
+
+  .navbar-custom .nav .dropdown-menu li a:hover,
+  .navbar-custom .nav .dropdown-menu li a:focus {
+    color: #555;
+  }
+  .navbar-custom .nav .dropdown-menu li a {
+    color: rgb(166, 166, 166);
+    padding: 20px;
+  }
+
+
 @media only screen and (min-width: 1170px) {
   .navbar-custom {
     -webkit-transition: background-color 0.3s;

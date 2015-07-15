@@ -46,7 +46,11 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="<?php bloginfo('template_url'); ?>/js/clean-blog.min.js"></script>
+
+    <script src="<?php bloginfo('template_url'); ?>/js/background-check.min.js"></script>
     
+    <script src="<?php bloginfo('template_url'); ?>/js/custom.js"></script>
+
     <?php wp_footer(); ?>
 </body>
 

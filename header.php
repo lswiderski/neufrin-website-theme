@@ -16,7 +16,8 @@
     <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="<?php bloginfo('template_url'); ?>/css/clean-blog.min.css" rel="stylesheet">
+    <!--<link href="<?php bloginfo('template_url'); ?>/css/clean-blog.min.css" rel="stylesheet">-->
+    <link href="<?php bloginfo('template_url'); ?>/css/clean-blog.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -34,8 +35,9 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+   
+
+            <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -45,50 +47,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand" href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a>
             </div>
 
-           
-            
-            <?php
-
-class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
-  function start_lvl(&$output, $depth) {
-    $indent = str_repeat("\t", $depth);
-    $output .= "\n$indent<ul class=\"sub-menu dropdown-menu\">\n";
-  }
-}
-
-$defaults = array(
-   
-    'container'       => 'div',
-    'container_class' => 'collapse navbar-collapse',
-    'container_id'    => 'bs-example-navbar-collapse-1',
-    'menu_class'      => 'menu nav navbar-nav navbar-right',
-);
-
-wp_nav_menu( $defaults );
-
-?>
- <!-- Collect the nav links, forms, and other content for toggling -->
-<!--
+            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="post.html">Sample Post</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>-->
+                <?php /* Primary navigation */
+wp_nav_menu( array(
+  'menu' => 'top_menu',
+  'depth' => 2,
+  'container' => false,
+  'menu_class' => 'nav navbar-nav navbar-right',
+  //Process nav menu using our custom nav walker
+  'walker' => new wp_bootstrap_navwalker())
+);
+?>
+            </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
+            
