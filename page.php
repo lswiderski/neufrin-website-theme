@@ -1,13 +1,13 @@
 <?php
 /**
-*Single Post Template: Post
+*Page Template: Page
 */
 ?>
+    <?php get_header(); ?>
 
 
-<?php get_header(); ?>
 
- <?php /* The loop */ ?>
+<?php /* The loop */ ?>
             <?php while ( have_posts() ) : the_post(); ?>
 
    
@@ -30,6 +30,6 @@
         </div>
     </article>
 
- 
- <?php get_sidebar(); ?>
-<?php get_footer(); ?>
+
+    <?php get_sidebar(); ?>
+    <?php get_footer(); ?>
