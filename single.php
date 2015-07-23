@@ -12,11 +12,40 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('<?php
+     <header class="intro-header" style="background-image: url('<?php
+            if ( has_post_thumbnail() ) {
+
+
+
+
 //Get the Thumbnail URL
 $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 1900,600 ), false, '' );
-echo $src[0];
-?>')">
+
+                $data = getimagesize($src[0]);
+$width = $data[0];
+$height = $data[1];
+
+if($width>1000 && $height>500)
+{
+   echo $src[0]; 
+}
+else{
+
+
+   $src= "http://neufrin.com/home-bg.jpg";
+   echo $src;
+}
+
+}
+
+else{
+
+
+   $src= "http://neufrin.com/home-bg.jpg";
+   echo $src;
+} {
+    # code...
+}?>')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
