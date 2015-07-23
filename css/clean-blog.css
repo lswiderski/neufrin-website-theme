@@ -179,6 +179,7 @@ hr.small {
   background-size: cover;
   -o-background-size: cover;
   margin-bottom: 50px;
+  min-height: 400px;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
