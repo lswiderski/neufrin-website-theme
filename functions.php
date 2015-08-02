@@ -27,5 +27,14 @@ if (class_exists('MultiPostThumbnails')) {
         )
     );
 }
-
+function get_custom_cat_template($single_template) {
+     global $post;
+ 
+       if ( in_category( 'adventure' )) {
+          $single_template = dirname( __FILE__ ) . '/single-adventure.php';
+     }
+     return $single_template;
+}
+ 
+add_filter( "single_template", "get_custom_cat_template" ) ;
 ?>
