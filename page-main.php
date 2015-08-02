@@ -39,7 +39,7 @@
                                                         </a>
                                                 </div>              
                                                 <?php endwhile; ?>
-                                                <a href="#" class="list-group-item list-group-item-override text-right"><h6>Show more...</h6></a>         
+                                                <a href="<?php echo site_url(); ?>/category/adventure/" class="text-right"><h6>Show more...</h6></a>         
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
@@ -59,7 +59,7 @@
                                                         </a>
                                                 </div>              
                                                 <?php endwhile; ?>
-                                                <a href="#" class="list-group-item list-group-item-override text-right"><h6>Show more...</h6></a>      
+                                                <a href="<?php echo site_url(); ?>/category/projects/" class="text-right"><h6>Show more...</h6></a>      
                                         </div>
                                     </div>
                                 </div>
@@ -88,6 +88,7 @@
                                                     </div>
                                                     <hr>                                             
                                                 <?php endwhile; ?>
+                                                <a href="<?php echo site_url(); ?>/category/blog/" class="text-right"><h6>Show more...</h6></a> 
                                     </div>
                         
                </div>
