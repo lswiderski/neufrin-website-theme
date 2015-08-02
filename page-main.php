@@ -39,7 +39,7 @@
                                                         </a>
                                                 </div>              
                                                 <?php endwhile; ?>
-                                                <a href="<?php echo site_url(); ?>/category/adventure/" class="text-right"><h6>Show more...</h6></a>         
+                                                <a href="<?php echo site_url(); ?>/category/adventure/" class="text-right"><u><h6>Show more...</h6></u></a>         
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
@@ -59,11 +59,11 @@
                                                         </a>
                                                 </div>              
                                                 <?php endwhile; ?>
-                                                <a href="<?php echo site_url(); ?>/category/projects/" class="text-right"><h6>Show more...</h6></a>      
+                                                <a href="<?php echo site_url(); ?>/category/projects/" class="text-right"><u><h6>Show more...</h6></u></a>      
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row" style="margin: 10px">
                                      <?php $blog_query = new WP_Query( 'category_name=blog&posts_per_page=3' ); ?>
                 
                                                    <?php while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
@@ -88,14 +88,14 @@
                                                     </div>
                                                     <hr>                                             
                                                 <?php endwhile; ?>
-                                                <a href="<?php echo site_url(); ?>/category/blog/" class="text-right"><h6>Show more...</h6></a> 
+                                                <a href="<?php echo site_url(); ?>/category/blog/" class="text-right"><u><h6>Show more...</h6></u></a> 
                                     </div>
                         
                </div>
                <div class="col-lg-3 col-lg-offset-1 col-md-2 col-md-offset-1">
-                   <h4 class="text-center">Instagram</h4>
+                   
                         <?php echo do_shortcode('[fts instagram instagram_id=1315352355 type=user]'); ?>
-                        <h4 class="text-center">Twitter</h4>
+                        
                         <?php echo do_shortcode('[fts twitter twitter_name=neufrin twitter_height=450px]'); ?>
                </div>
             <?php endwhile; ?>
