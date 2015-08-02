@@ -20,7 +20,7 @@
                                 the_post_thumbnail('large', array( 'class' => 'img-responsive center-block' ));
                             }
                             ?>
-                    </div>
+                          </div>
                         <a href="<?php the_permalink(); ?>" rel="bookmark"  title="Permanent Link to <?php the_title_attribute(); ?>">
                             <h2 class="post-title">
                                <?php the_title(); ?>
