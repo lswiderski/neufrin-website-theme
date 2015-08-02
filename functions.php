@@ -17,4 +17,15 @@ add_action( 'after_setup_theme', 'wpt_setup' );
 
 
 require_once('wp_bootstrap_navwalker.php');
+
+if (class_exists('MultiPostThumbnails')) {
+    new MultiPostThumbnails(
+        array(
+            'label' => 'Page Header',
+            'id' => 'page-header',
+            'post_type' => 'post'
+        )
+    );
+}
+
 ?>

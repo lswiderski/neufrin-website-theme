@@ -67,41 +67,57 @@ wp_nav_menu( array(
         </div>
         <!-- /.container -->
     </nav>
+    
+    <?php  ?>
           <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
      <header class="intro-header" style="background-image: url('<?php
-            if ( has_post_thumbnail() ) {
-
-
-
 
 //Get the Thumbnail URL
-$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 1900,600 ), false, '' );
+$success = false;
 
-                $data = getimagesize($src[0]);
-$width = $data[0];
-$height = $data[1];
-
-if($width>1000 && $height>500)
+if (class_exists('MultiPostThumbnails')) 
 {
-   echo $src[0]; 
+    $src =  MultiPostThumbnails::get_post_thumbnail_url(
+        get_post_type(),
+        'page-header',
+        $post->ID
+    );
+    if($src != '')
+    {
+        $success = true;
+        echo $src;  
+    }
+    else
+    {
+        $success = false; 
+    }
+    
 }
-else{
 
+if(has_post_thumbnail() && $success == false)
+{
+    $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 1900,600 ), false, '' ); 
+    $data = getimagesize($src[0]);
+    $width = $data[0];
+    $height = $data[1];
 
-   $src= "http://neufrin.com/home-bg.jpg";
-   echo $src;
-}
+    if($width>1000 && $height>500)
+    {
+        $success = true;
+        echo $src[0]; 
+    }
+    else
+    {
+        $success = false; 
+    }
+}    
 
-}
-
-else{
-
-
-   $src= "http://neufrin.com/home-bg.jpg";
-   echo $src;
-} {
-    # code...
+if($success==false)
+{
+    $success = true;
+    $src= "http://neufrin.com/home-bg.jpg";
+    echo $src;
 }?>')">
         <div class="container">
             <div class="row">
