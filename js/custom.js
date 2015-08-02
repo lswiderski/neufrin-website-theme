@@ -1,4 +1,4 @@
 BackgroundCheck.init({
-  targets: '.menu-item',
+  targets: '.menu-item, .post-heading',
   images: '.intro-header'
 });
