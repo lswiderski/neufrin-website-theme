@@ -1,3 +1,8 @@
+<?php
+/**
+*Category Template: Projects
+*/
+?>   
     <?php get_header(); ?>
 
 
@@ -12,15 +17,16 @@
             <?php while ( have_posts() ) : the_post(); ?>
 
                 
-                    <div class="post-preview  <?php post_class(); ?>" id="post-<?php the_ID(); ?> ">
-                        <div class="">
+                    <div class="post-preview  <?php post_class(); ?>" id="post-<?php the_ID(); ?> " style="min-height : 200px;">
+                    <div class="thumbnail right-big-screen">
                         <?php
                             if(has_post_thumbnail())
                             {
-                                the_post_thumbnail('large', array( 'class' => 'img-responsive center-block' ));
+                                the_post_thumbnail(array(150,150));
                             }
                             ?>
                     </div>
+                    <div>
                         <a href="<?php the_permalink(); ?>" rel="bookmark"  title="Permanent Link to <?php the_title_attribute(); ?>">
                             <h2 class="post-title">
                                <?php the_title(); ?>
@@ -30,6 +36,7 @@
                             </h3>
                         </a>
                         <p class="post-meta">Posted by <a href="#"><?php the_author_posts_link(); ?></a> on <?php the_time('F jS, Y'); ?></p>
+                    </div>
                     </div>
                     <hr>
             <?php endwhile; ?>
