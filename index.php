@@ -29,7 +29,7 @@
                                <?php echo get_the_excerpt(); ?>
                             </h3>
                         </a>
-                        <p class="post-meta">Posted by <a href="#"><?php the_author_posts_link(); ?></a> on <?php the_time('F jS, Y'); ?></p>
+                        <p class="post-meta">Posted on <?php the_time('F jS, Y'); ?></p>
                     </div>
                     <hr>
             <?php endwhile; ?>
