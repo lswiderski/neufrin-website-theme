@@ -64,6 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="row" style="margin: 10px">
+                                    <ins><h3>Latest Posts</h3></ins>
                                      <?php $blog_query = new WP_Query( 'category_name=blog&posts_per_page=3' ); ?>
                 
                                                    <?php while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
