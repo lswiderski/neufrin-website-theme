@@ -15,11 +15,15 @@
    
     <!-- Post Content -->
     <article>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-               <div class="col-lg-6 col-lg-offset-1 col-md-7 col-md-offset-1">
+                 <?php echo do_shortcode('[fts instagram instagram_id=1315352355 type=user]'); ?>
+            </div>
+            <div class="row">
+               <div class="col-lg-12  col-md-12 ">
+                   <div id="mainPage_Container" style="display : none;">
                         <?php the_content(); ?>
-                        
+                   </div>
                         
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
@@ -91,14 +95,12 @@
                                                 <?php endwhile; ?>
                                                 <a href="<?php echo site_url(); ?>/category/blog/" class="text-right"><u><h6>Show more...</h6></u></a> 
                                     </div>
+                                    <div class="row">
+                                         <?php echo do_shortcode('[fts twitter twitter_name=neufrin twitter_height=450px]'); ?>
+                                        </div>
                         
                </div>
-               <div class="col-lg-3 col-lg-offset-1 col-md-2 col-md-offset-1">
-                   
-                        <?php echo do_shortcode('[fts instagram instagram_id=1315352355 type=user]'); ?>
-                        
-                        <?php echo do_shortcode('[fts twitter twitter_name=neufrin twitter_height=450px]'); ?>
-               </div>
+               
             <?php endwhile; ?>
                
             </div>
