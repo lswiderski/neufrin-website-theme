@@ -95,9 +95,6 @@
                                                 <?php endwhile; ?>
                                                 <a href="<?php echo site_url(); ?>/category/blog/" class="text-right"><u><h6>Show more...</h6></u></a> 
                                     </div>
-                                    <div class="row">
-                                         <?php echo do_shortcode('[fts twitter twitter_name=neufrin twitter_height=450px]'); ?>
-                                        </div>
                         
                </div>
                
