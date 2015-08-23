@@ -119,7 +119,7 @@ if($success==false)
     $src= "http://neufrin.com/home-bg.jpg";
     echo $src;
 }?>')">
-        <div class="container" id="header_Container" style="color:white;">
+        <div class="container" id="header_Container" style="color:white; text-align: center;">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
