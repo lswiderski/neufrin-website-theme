@@ -43,7 +43,7 @@
                                                         </a>
                                                 </div>              
                                                 <?php endwhile; ?>
-                                                <a href="<?php echo site_url(); ?>/category/adventure/" class="text-right"><u><h6>Show more...</h6></u></a>         
+                                                <a href="<?php echo site_url(); ?>/category/adventure/" class="text-right"><u><h6>Show more adventures...</h6></u></a>         
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
@@ -63,13 +63,13 @@
                                                         </a>
                                                 </div>              
                                                 <?php endwhile; ?>
-                                                <a href="<?php echo site_url(); ?>/category/projects/" class="text-right"><u><h6>Show more...</h6></u></a>      
+                                                <a href="<?php echo site_url(); ?>/category/projects/" class="text-right"><u><h6>Show more projects...</h6></u></a>      
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row" style="margin: 10px">
                                     <ins><h3>Latest Posts</h3></ins>
-                                     <?php $blog_query = new WP_Query( 'category_name=blog&posts_per_page=3' ); ?>
+                                     <?php $blog_query = new WP_Query( 'category_name=blog,adventure&posts_per_page=3' ); ?>
                 
                                                    <?php while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
                 	                               <div class="post-preview  <?php post_class(); ?>" id="post-<?php the_ID(); ?> ">
@@ -93,7 +93,7 @@
                                                     </div>
                                                     <hr>                                             
                                                 <?php endwhile; ?>
-                                                <a href="<?php echo site_url(); ?>/category/blog/" class="text-right"><u><h6>Show more...</h6></u></a> 
+                                                <a href="<?php echo site_url(); ?>/category/blog/" class="text-right"><u><h6>Show more blog posts...</h6></u></a> 
                                     </div>
                         
                </div>
